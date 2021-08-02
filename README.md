@@ -145,10 +145,13 @@ check_json = {
 
 
 class CheckFunction:
+
     def check_msg(self, msg):
         if msg:
             return True
+
     def check_age(self, age):
+
         return True if age>12 else False
         
 instance = JsonVerify(demo_json, check_func=CheckFunction())
@@ -184,9 +187,11 @@ check_json = {
 
 
 class CheckFunction:
+
     def check_msg(self, msg):
         if msg:
             return True
+
     def check_age(self, age):
         return True if age>12 else False
         
