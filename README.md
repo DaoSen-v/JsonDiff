@@ -34,8 +34,7 @@ print(instance.info)
 ```
 \>>>
 ```json
-{'loseKey': ['phone'], 'increaseKey': ['address', 'name.0.language'], 'keyError': {'msg': {'type_rules': ['str'], 'check_value': None, 'detail': '数据类型错误'}}, 'patchRate': '66.67%'}
-
+{"loseKey": ["phone"], "increaseKey": ["address", "name.0.language"], "keyError": {"msg": {"type_rules": ["str"], "check_value": null, "detail": "数据类型错误"}}, "patchRate": "66.67%"}
 ```
 
 备注：校验规则{key：value}
@@ -90,7 +89,7 @@ print(instance.info)
 ```
 \>>>
 ```json
-{'loseKey': [], 'increaseKey': [], 'keyError': {'msg': {'rules_value': ['不匹配的文字信息'], 'check_value': '错误信息', 'detail': '期望值与结果值不同'}}, 'patchRate': '80.00%'}
+{"loseKey": [], "increaseKey": [], "keyError": {"msg": {"rules_value": ["不匹配的文字信息"], "check_value": "错误信息", "detail": "期望值与结果值不同"}}, "patchRate": "80.00%"}
 ```
 
 
@@ -119,8 +118,9 @@ instance.verify(check_json)
 print(instance.info)
 ```
 \>>> 
+
 ```json
-{'loseKey': [], 'increaseKey': [], 'keyError': {'msg': {'regular_rules': '^\\d+$', 'check_value': '错误信息', 'detail': '正则匹配错误'}}, 'patchRate': '80.00%'}
+{"loseKey": [], "increaseKey": [], "keyError": {"msg": {"regular_rules": "^\\d+$", "check_value": "错误信息", "detail": "正则匹配错误"}}, "patchRate": "80.00%"}
 ```
 
 
@@ -164,8 +164,9 @@ print(instance.info)
 ```
 
 \>>> 
+
 ```json
-{'loseKey': [], 'increaseKey': [], 'keyError': {'name.0.age': {'func_rules': 'check_age', 'check_value': 12, 'detail': '值不符合函数校验规则'}}, 'patchRate': '80.00%'}
+{"loseKey": [], "increaseKey": [], "keyError": {"name.0.age": {"func_rules": "check_age", "check_value": 12, "detail": "值不符合函数校验规则"}}, "patchRate": "80.00%"}
 ```
 ##### 3、 做精确值匹配 check_value_only
 
@@ -206,6 +207,8 @@ print(instance.info)
 ```
 \>>> 
 ```json
-{'loseKey': [], 'increaseKey': [], 'keyError': {'name': {'rules_value': [[{'age': 18}, {'phone': 213213, 'age': 18}]], 'check_value': [{'age': 12}, {'phone': 213213, 'age': 18}], 'detail': '期望值与结果值不同'}, 'name.0': {'rules_value': [{'age': 18}, {'phone': 213213, 'age': 18}], 'check_value': {'age': 12}, 'detail': '期望值与结果值不同'}, 'name.0.age': {'rules_value': [18], 'check_value': 12, 'detail': '期望值与结果值不同'}}, 'patchRate': '40.00%'}
+{"loseKey": [], "increaseKey": [], "keyError": {"name": {"rules_value": [[{"age": 18}, {"phone": 213213, "age": 18}]], "check_value": [{"age": 12}, {"phone": 213213, "age": 18}], "detail": "期望值与结果值不同"}, "name.0": {"rules_value": [{"age": 18}, {"phone": 213213, "age": 18}], "check_value": {"age": 12}, "detail": "期望值与结果值不同"}, "name.0.age": {"rules_value": [18], "check_value": 12, "detail": "期望值与结果值不同"}}, "patchRate": "40.00%"}
 ```
+
+
 
